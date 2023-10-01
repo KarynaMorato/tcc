@@ -97,10 +97,10 @@ SET collation_connection = utf8_general_ci;
 
 -- PerfilUsuario
 INSERT INTO PerfilUsuario (Nome) VALUES 
-ROW('Administrador'),
-ROW('Empresa'),
-ROW('Operador'),
-ROW('Cliente');
+('Administrador'),
+('Empresa'),
+('Operador'),
+('Cliente');
 
 -- Empresa
 INSERT INTO Empresa (Nome, CNPJ, Endereco, Telefone) 
@@ -112,31 +112,31 @@ VALUES ('99999999999',1,'teste');
 
 -- StausServico
 INSERT INTO StausServico (Descricao) VALUES
-ROW('A Fazer'),
-ROW('Em Andamento'),
-ROW('Aguardando Material'),
-ROW('Aguardando Terceiro'),
-ROW('Aguardando Outro Serviço'),
-ROW('Com Problema'),
-ROW('Finalizado');
+('A Fazer'),
+('Em Andamento'),
+('Aguardando Material'),
+('Aguardando Terceiro'),
+('Aguardando Outro Serviço'),
+('Com Problema'),
+('Finalizado');
 
 -- Servico
 INSERT INTO Servico (CodEmpresa, Descricao, UnidadeMedida, Valor) VALUES 
-ROW(1, 'Pintura Interna', 'M²', 5),
-ROW(1, 'Pintura Externa', 'M²', 7),
-ROW(1, 'Fundação', 'M²', 20),
-ROW(1, 'Pilares', 'M²', 15),
-ROW(1, 'Vigas', 'M²', 15),
-ROW(1, 'Laje', 'M²', 35),
-ROW(1, 'Escada', 'M²', 8),
-ROW(1, 'Paredes Chapisco', 'M²', 3),
-ROW(1, 'Paredes Emboço', 'M²', 3),
-ROW(1, 'Paredes Reboco', 'M²', 3),
-ROW(1, 'Limpeza Caixa de Água', 'Qtd', 50),
-ROW(1, 'Instalação Piso Cerâmico', 'M²', 10),
-ROW(1, 'Instalação Piso Porcelanato', 'M²', 12),
-ROW(1, 'Construção Telhado', 'M²', 12),
-ROW(1, 'Demolição', 'M²', 7);
+(1, 'Pintura Interna', 'M²', 5),
+(1, 'Pintura Externa', 'M²', 7),
+(1, 'Fundação', 'M²', 20),
+(1, 'Pilares', 'M²', 15),
+(1, 'Vigas', 'M²', 15),
+(1, 'Laje', 'M²', 35),
+(1, 'Escada', 'M²', 8),
+(1, 'Paredes Chapisco', 'M²', 3),
+(1, 'Paredes Emboço', 'M²', 3),
+(1, 'Paredes Reboco', 'M²', 3),
+(1, 'Limpeza Caixa de Água', 'Qtd', 50),
+(1, 'Instalação Piso Cerâmico', 'M²', 10),
+(1, 'Instalação Piso Porcelanato', 'M²', 12),
+(1, 'Construção Telhado', 'M²', 12),
+(1, 'Demolição', 'M²', 7);
 
 -- Cliente
 INSERT INTO Cliente (Nome, CPF, Telefone, Endereco) 
