@@ -156,7 +156,7 @@ BEGIN
     INSERT INTO Usuario (CPF, CodPerfilUsuario, Senha)
     VALUES (p_CPF, p_CodPerfilUsuario, p_Senha);
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Listar Usuario
 DELIMITER $$
@@ -165,7 +165,7 @@ BEGIN
     SELECT CPF, CodPerfilUsuario, Senha 
 	FROM Usuario;
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Ler Usuario por CPF
 DELIMITER $$
@@ -177,7 +177,7 @@ BEGIN
     FROM Usuario
     WHERE CPF = p_CPF;
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Atualizar Usuario
 DELIMITER $$
@@ -191,7 +191,7 @@ BEGIN
     SET CodPerfilUsuario = p_CodPerfilUsuario, Senha = p_Senha
     WHERE CPF = p_CPF;
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Excluir Usuario
 DELIMITER $$
@@ -202,7 +202,7 @@ BEGIN
     DELETE FROM Usuario
     WHERE CPF = p_CPF;
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- PRC_STATUSSERVICO
 -- Inserir StausServico
@@ -214,7 +214,7 @@ BEGIN
     INSERT INTO StausServico (Descricao)
     VALUES (p_Descricao);
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Listar StausServico
 DELIMITER $$
@@ -223,7 +223,7 @@ BEGIN
     SELECT CodStausServico, Descricao 
 	FROM StausServico;
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Ler StausServico por PK
 DELIMITER $$
@@ -235,7 +235,7 @@ BEGIN
     FROM StausServico
     WHERE CodStausServico = p_CodStausServico;
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Atualizar StausServico
 DELIMITER $$
@@ -248,7 +248,7 @@ BEGIN
     SET Descricao = p_Descricao
     WHERE CodStausServico = p_CodStausServico;
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Excluir StausServico
 DELIMITER $$
@@ -259,7 +259,7 @@ BEGIN
     DELETE FROM StausServico
     WHERE CodStausServico = p_CodStausServico;
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- PRC_SERVICO
 -- Inserir Servico
@@ -273,7 +273,7 @@ BEGIN
     INSERT INTO Servico (Descricao, UnidadeMedida, Valor)
     VALUES (p_Descricao, p_UnidadeMedida, p_Valor);
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Listar Servico
 DELIMITER $$
@@ -282,7 +282,7 @@ BEGIN
     SELECT CodServico, Descricao, UnidadeMedida, Valor 
 	FROM Servico;
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Ler Servico por PK
 DELIMITER $$
@@ -294,7 +294,7 @@ BEGIN
     FROM Servico
     WHERE CodServico = p_CodServico;
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Atualizar Servico
 DELIMITER $$
@@ -309,7 +309,7 @@ BEGIN
     SET Descricao = p_Descricao, UnidadeMedida = p_UnidadeMedida, Valor = p_Valor
     WHERE CodServico = p_CodServico;
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Excluir Servico
 DELIMITER $$
@@ -320,7 +320,7 @@ BEGIN
     DELETE FROM Servico
     WHERE CodServico = p_CodServico;
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- PRC_PERFILUSUARIO
 -- Inserir PerfilUsuario
@@ -332,7 +332,7 @@ BEGIN
     INSERT INTO PerfilUsuario (Nome)
     VALUES (p_Nome);
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Listar PerfilUsuario
 DELIMITER $$
@@ -341,7 +341,7 @@ BEGIN
     SELECT CodPerfilUsuario, Nome 
 	FROM PerfilUsuario;
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Ler PerfilUsuario por PK
 DELIMITER $$
@@ -353,7 +353,7 @@ BEGIN
     FROM PerfilUsuario
     WHERE CodPerfilUsuario = p_CodPerfilUsuario;
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Atualizar PerfilUsuario
 DELIMITER $$
@@ -366,7 +366,7 @@ BEGIN
     SET Nome = p_Nome
     WHERE CodPerfilUsuario = p_CodPerfilUsuario;
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Excluir PerfilUsuario
 DELIMITER $$
@@ -377,7 +377,7 @@ BEGIN
     DELETE FROM PerfilUsuario
     WHERE CodPerfilUsuario = p_CodPerfilUsuario;
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- PRC_ORCAMENTOSERVICO
 -- Inserir OrcamentoServicos
@@ -394,7 +394,7 @@ BEGIN
     INSERT INTO OrcamentoServicos (CodOrcamento, CodServico, Quantidade, CodStausServico, DataInicio, DataFim)
     VALUES (p_CodOrcamento, p_CodServico, p_Quantidade, p_CodStausServico, p_DataInicio, p_DataFim);
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Listar OrcamentoServicos
 DELIMITER $$
@@ -403,7 +403,7 @@ BEGIN
     SELECT CodOrcamentoServicos, CodOrcamento, CodServico, Quantidade, CodStausServico, DataInicio, DataFim 
 	FROM OrcamentoServicos;
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Ler OrcamentoServicos por PK
 DELIMITER $$
@@ -415,7 +415,7 @@ BEGIN
     FROM OrcamentoServicos
     WHERE CodOrcamentoServicos = p_CodOrcamentoServicos;
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Ler OrcamentoServicos por FK
 DELIMITER $$
@@ -427,7 +427,7 @@ BEGIN
     FROM OrcamentoServicos
     WHERE CodServico = p_CodServico;
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Atualizar OrcamentoServicos
 DELIMITER $$
@@ -446,7 +446,7 @@ BEGIN
         CodStausServico = p_CodStausServico, DataInicio = p_DataInicio, DataFim = p_DataFim
     WHERE CodOrcamentoServicos = p_CodOrcamentoServicos;
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Excluir OrcamentoServicos
 DELIMITER $$
@@ -457,7 +457,7 @@ BEGIN
     DELETE FROM OrcamentoServicos
     WHERE CodOrcamentoServicos = p_CodOrcamentoServicos;
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- PRC_ORCAMENTO
 -- Inserir Orcamento
@@ -474,7 +474,7 @@ BEGIN
     INSERT INTO Orcamento (CodEmpresa, CodCliente, CodStausServico, DataInicio, DataFim, ValorTotal, ValorRecebido)
     VALUES (p_CodEmpresa, p_CodCliente, p_CodStausServico, p_DataInicio, p_DataFim, p_ValorTotal, p_ValorRecebido);
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Listar Orcamento
 DELIMITER $$
@@ -483,7 +483,7 @@ BEGIN
     SELECT CodOrcamento, CodEmpresa, CodCliente, CodStausServico, DataInicio, DataFim, ValorTotal, ValorRecebido 
 	FROM Orcamento;
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Ler Orcamento por PK
 DELIMITER $$
@@ -495,7 +495,7 @@ BEGIN
     FROM Orcamento
     WHERE CodOrcamento = p_CodOrcamento;
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Atualizar Orcamento
 DELIMITER $$
@@ -514,7 +514,7 @@ BEGIN
 	DataFim = p_DataFim, ValorTotal = p_ValorTotal, ValorRecebido = p_ValorRecebido
     WHERE CodOrcamento = p_CodOrcamento;
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Excluir Orcamento
 DELIMITER $$
@@ -525,7 +525,7 @@ BEGIN
     DELETE FROM Orcamento
     WHERE CodOrcamento = p_CodOrcamento;
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- PRC_EMPRESA
 -- Inserir Empresa
@@ -540,7 +540,7 @@ BEGIN
     INSERT INTO Empresa (Nome, CNPJ, Telefone, Endereco)
     VALUES (p_Nome, p_CNPJ, p_Telefone, p_Endereco);
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Listar Empresa
 DELIMITER $$
@@ -549,7 +549,7 @@ BEGIN
     SELECT CodEmpresa, Nome, CNPJ, Telefone, Endereco 
 	FROM Empresa;
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Ler Empresa por PK
 DELIMITER $$
@@ -561,7 +561,7 @@ BEGIN
     FROM Empresa
     WHERE CodEmpresa = p_CodEmpresa;
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Atualizar Empresa
 DELIMITER $$
@@ -577,7 +577,7 @@ BEGIN
     SET Nome = p_Nome, CNPJ = p_CNPJ, Telefone = p_Telefone, Endereco = p_Endereco
     WHERE CodEmpresa = p_CodEmpresa;
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Excluir Empresa
 DELIMITER $$
@@ -588,7 +588,7 @@ BEGIN
     DELETE FROM Empresa
     WHERE CodEmpresa = p_CodEmpresa;
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- PRC_CONTROLEPAGAMENTO
 -- Inserir ControlePagamento
@@ -602,7 +602,7 @@ BEGIN
     INSERT INTO ControlePagamento (CodOrcamento, DataPagamento, Valor)
     VALUES (p_CodOrcamento, p_DataPagamento, p_Valor);
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Listar ControlePagamento
 DELIMITER $$
@@ -611,7 +611,7 @@ BEGIN
     SELECT CodControlePagamento, CodOrcamento, DataPagamento, Valor 
 	FROM ControlePagamento;
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Ler ControlePagamento por PK
 DELIMITER $$
@@ -623,7 +623,7 @@ BEGIN
     FROM ControlePagamento
     WHERE CodControlePagamento = p_CodControlePagamento;
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Atualizar ControlePagamento
 DELIMITER $$
@@ -638,7 +638,7 @@ BEGIN
     SET CodOrcamento = p_CodOrcamento, DataPagamento = p_DataPagamento, Valor = p_Valor
     WHERE CodControlePagamento = p_CodControlePagamento;
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Excluir ControlePagamento
 DELIMITER $$
@@ -649,7 +649,7 @@ BEGIN
     DELETE FROM ControlePagamento
     WHERE CodControlePagamento = p_CodControlePagamento;
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- PRC_CLIENTES
 -- Inserir Cliente
@@ -664,7 +664,7 @@ BEGIN
     INSERT INTO Cliente (Nome, CPF, Endereco, Telefone)
     VALUES (p_Nome, p_CPF, p_Endereco, p_Telefone);
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Listar Cliente
 DELIMITER $$
@@ -673,7 +673,7 @@ BEGIN
     SELECT CodCliente, Nome, CPF, Endereco, Telefone 
 	FROM Cliente;
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Ler Cliente por PK
 DELIMITER $$
@@ -685,7 +685,7 @@ BEGIN
     FROM Cliente
     WHERE CodCliente = p_CodCliente;
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Atualizar Cliente
 DELIMITER $$
@@ -701,7 +701,7 @@ BEGIN
     SET Nome = p_Nome, CPF = p_CPF, Endereco = p_Endereco, Telefone = p_Telefone
     WHERE CodCliente = p_CodCliente;
 END $$
-DELIMITER;
+DELIMITER ;
 
 -- Excluir Cliente
 DELIMITER $$
